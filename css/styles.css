@@ -454,7 +454,8 @@ body {
   border-radius: 50%;
 }
 
-.social-link-footer:hover {
+.social-link-footer:hover,
+.social-link-footer:focus {
 	background-color: var(--accent-color);
 }
 /* ===================General styles for portfolio.html page=======================*/
