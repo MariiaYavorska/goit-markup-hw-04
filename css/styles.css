@@ -505,10 +505,10 @@ body {
 	width: 370px;
 	border: 1px solid var(--border-color-projects);
 }
-.works-img {
+
+.works-card-img {
 	display: block;
-	max-width: 100%;
-	height: auto;
+	width: 100%;
 }
 
 .works-img:hover,
