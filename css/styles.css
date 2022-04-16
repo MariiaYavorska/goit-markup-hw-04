@@ -6,6 +6,18 @@ html {
 *::after {
 	box-sizing: inherit;
 }
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+  }
 /* ===================delete default styles=============*/
 * {
 	margin: 0;
@@ -36,7 +48,6 @@ a {
 body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
@@ -189,18 +200,18 @@ body {
 }
 
 .btn{
+	font-family: 'Roboto', sans-serif;
 	cursor: pointer;
 }
 .hero-btn {
 	margin-top: 0;
 	padding: 10px 32px;
 	display: inline-block;
-	min-width: 200px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border: none;
 	border-radius: 4px;
 	font-weight: 700;
 	font-size: 16px;
-	font-family: inherit;
 	line-height: 1.88;
 	letter-spacing: 0.06em;
 	color: var(--text-color-white);
@@ -211,9 +222,7 @@ body {
 background-color: #188CE8;
 }
 /* =============================Почему мы=================================*/
-.work-process,
-.benefits,
-.team {
+.section {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
@@ -267,14 +276,11 @@ background-color: #188CE8;
 
 .work-process {
 	padding-top: 0;
-	padding-bottom: 94px;
 }
 .work-process-gallery {
 	display: flex;
 }
-.work-process-title,
-.team-title,
-.clients-title {
+.title {
 	margin-top: 0;
 	margin-bottom: 50px;
 	font-weight: 700;
@@ -284,11 +290,17 @@ background-color: #188CE8;
 	color: var(--text-color-black);
 }
 
-.work-process-img {
+.work-process-list {
 	margin-top: 0;
-	margin-right: 30px;
 	width: 370px;
-}
+	}
+.work-process-list:not(:last-child) {
+		margin-right: 30px;
+	}
+.work-process-img {
+		display: block;
+		max-width: 100%;
+	}
 
 /* ================================Our team===============================*/
 .team {
@@ -297,11 +309,6 @@ background-color: #188CE8;
 .team-list {
 	display: flex;
 }
-.team-title {
-	margin-top: 0;
-	margin-bottom: 50px;
-}
-
 .team-list .item + .item {
 	margin-left: 30px;
 }
@@ -315,12 +322,16 @@ background-color: #188CE8;
 	border-radius: 0px 0px 4px 4px;
 }
 .team-image {
+	display: block;
+	max-width: 100%;
 	margin-top: 0;
-	margin-bottom: 30px;
 }
 
+.team-descr {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
 .team-member {
-	margin-top: 0;
 	margin-bottom: 10px;
 	font-weight: 500;
 	font-size: 16px;
@@ -329,15 +340,15 @@ background-color: #188CE8;
 	color: var(--text-color-black);
 }
 .position {
-	margin-top: 0;
-	margin-bottom: 30px;
+	margin-bottom: 16px;
 	font-size: 16px;
 	line-height: 1.19;
 	text-align: center;
 }
 .member-social-links {
 	display: flex;
-	margin: 0 32px 30px;
+	margin: 0 32px 0;
+	
 }
 .social-link {
 	display: flex;
@@ -426,6 +437,10 @@ background-color: #188CE8;
 	font-style: normal;
 	color: var(--text-color-auth-nav);
 }
+.footer-contact-link:hover,
+.footer-contact-link:focus{
+	color: var(--accent-color);
+}
 .footer-social-links {
 	margin-left: 70px;
 }
@@ -471,10 +486,7 @@ background-color: #188CE8;
 }
 /* ===================General styles for portfolio.html page=======================*/
 /*======================== Main============================*/
-.projects {
-	padding-top: 94px;
-	padding-bottom: 94px;
-}
+
 .filter .icon + .icon {
 	margin-left: 8px;
 }
@@ -510,16 +522,12 @@ background-color: #188CE8;
 .works .item:nth-last-child(-n + 3) {
 	margin-bottom: 0;
 }
-.works .item {
-	margin-right: 30px;
-	margin-bottom: 30px;
-	width: 370px;
-	border: 1px solid var(--border-color-projects);
+.works-img {
+	display: block;
 }
-
 .works-card-img {
 	display: block;
-	width: 100%;
+	max-width: 100%;
 }
 
 .works-img:hover,
@@ -527,8 +535,16 @@ background-color: #188CE8;
 	display: inline-block;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.works .item {
+	margin-right: 30px;
+	margin-bottom: 30px;
+	width: 370px;
+}
 .works-card {
 	padding: 20px 24px;
+	border-left: 1px solid var(--border-color-projects);
+	border-right: 1px solid var(--border-color-projects);
+	border-bottom: 1px solid var(--border-color-projects);
 }
 .works-title {
 	margin-top: 0;
