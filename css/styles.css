@@ -177,7 +177,7 @@ body {
 /* ===================================Hero============================================*/
 
 .hero {
-	margin-top: 0;
+	margin-top: 0 auto;
 	padding: 200px 0;
 	text-align: center;
 	max-width: 1600px;
@@ -347,8 +347,7 @@ background-color: #188CE8;
 }
 .member-social-links {
 	display: flex;
-	margin: 0 32px 0;
-	
+	justify-content: center;
 }
 .social-link {
 	display: flex;
@@ -373,14 +372,7 @@ background-color: #188CE8;
 	fill: currentColor;
 }
 /*==========================Clients======================*/
-.clients {
-	padding-top: 94px;
-	padding-bottom: 94px;
-}
-.clients-title {
-	margin-top: 0;
-	margin-bottom: 50px;
-}
+
 .clients-list {
 	display: flex;
 }
@@ -397,7 +389,6 @@ background-color: #188CE8;
 	border: 1px solid var(--icon-color);
 	color: var(--icon-color);
 	border-radius: 4px;
-
 }
 .clients-logo {
 	fill: currentColor;
@@ -474,9 +465,6 @@ background-color: #188CE8;
   width: 44px;
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
-  background-size: 20px;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 50%;
 }
 
