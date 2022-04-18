@@ -177,7 +177,7 @@ body {
 /* ===================================Hero============================================*/
 
 .hero {
-	margin-top: 0 auto;
+	margin: 0 auto;
 	padding: 200px 0;
 	text-align: center;
 	max-width: 1600px;
